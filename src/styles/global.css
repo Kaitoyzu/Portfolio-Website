@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-fg: #1A191E;
+  --color-bg: #FAF3DD;
+}
+
+:root {
+  /* Personal */
+  --state1-a: #001C55;
+  --state1-b: #A6E1FA;
+
+  /* Education */
+  --state2-a: #3C096C;
+  --state2-b: #E9D0FF;
+
+  /* Experience */
+  --state3-a: #8F1217;
+  --state3-b: #F8B8BA;
+
+  /* Projects */
+  --state4-a: #143324;
+  --state4-b: #C5E6CB;
+}
+
+/* Default state, so the variables are never undefined */
+:root,
+[data-state="1"] { --accent-a: var(--state1-a); --accent-b: var(--state1-b); }
+[data-state="2"] { --accent-a: var(--state2-a); --accent-b: var(--state2-b); }
+[data-state="3"] { --accent-a: var(--state3-a); --accent-b: var(--state3-b); }
+[data-state="4"] { --accent-a: var(--state4-a); --accent-b: var(--state4-b); }
+
+@theme inline {
+  --color-accent-a: var(--accent-a);
+  --color-accent-b: var(--accent-b);
+}
